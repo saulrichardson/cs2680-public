@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789587408148,
+      "tag": "0000_conscious_spitfire",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789922411128,
+      "tag": "0001_add_run_origin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789944227421,
+      "tag": "0002_standalone_worktrees",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1789944768223,
+      "tag": "0003_browser_mode",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1789990000000,
+      "tag": "0004_project_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1789990000001,
+      "tag": "0005_wrapups",
+      "breakpoints": true
+    }
+  ]
+}

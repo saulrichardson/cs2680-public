@@ -1,0 +1,4 @@
+The inclusive_count function gives incorrect counts for closed integer intervals.
+Investigate the repository, correct the implementation and verify ordinary,
+single-element, negative and reversed intervals. Preserve the documented public
+interface. This is a small native execution qualification, not a benchmark task.

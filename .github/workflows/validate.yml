@@ -1,0 +1,47 @@
+name: Validate curated source
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export-and-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/check_export.py --history
+      - run: python3 -m pip install -r assignment4/src/teamharness/requirements.txt
+      - name: Verify Assignment 4 runtime packaging
+        run: python3 -m unittest test_main_entrypoints.MainEntrypoints.test_package_contains_only_main_runtime_and_imports_it
+        env:
+          PYTHONPATH: assignment4:assignment4/test/teamharness
+  replay-fixtures:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: assignment1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          version: '10'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: assignment1/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm exec vitest run tests/core/agents.test.ts tests/core/derive.test.ts tests/core/patches.test.ts tests/core/reducer.test.ts tests/core/schemas.test.ts tests/server/replay.test.ts tests/server/router.test.ts tests/ui/rows.test.ts tests/ui/store.test.ts

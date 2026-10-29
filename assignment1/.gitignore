@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.data/
+.data-e2e/
+next-env.d.ts
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Generated local analysis, not a submission artifact
+docs/evidence.md

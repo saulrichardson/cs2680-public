@@ -1,0 +1,4 @@
+FROM lmsysorg/sglang@sha256:06e4f2ed21afde4ff513cda65070124e727ba23ccaeff7712b8c40e1097d611f
+RUN apt-get update -qq && apt-get install -y --no-install-recommends cuda-nvcc-13-4=13.4.92-1 cuda-cudart-dev-13-4 cuda-nvrtc-dev-13-4 cuda-cupti-dev-13-4 cuda-cccl-13-4 && rm -rf /var/lib/apt/lists/*
+ENV CUDA_HOME=/usr/local/cuda-13.4
+ENV PATH=/usr/local/cuda-13.4/bin:${PATH}

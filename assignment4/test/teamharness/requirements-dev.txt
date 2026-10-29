@@ -1,0 +1,3 @@
+# Runtime validation plus generated stateful testing.
+-r ../../src/teamharness/requirements.txt
+hypothesis==6.170.1

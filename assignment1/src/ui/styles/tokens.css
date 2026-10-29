@@ -1,0 +1,185 @@
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, system-ui, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  /* 12px is the floor: nothing in this console is smaller, including the stat captions. */
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-15: 15px;
+  --fs-17: 17px;
+  --fs-22: 22px;
+  --lh: 1.45;
+  --topbar-h: 52px;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --r-card: 12px;
+  --r-chip: 8px;
+  --r-pill: 999px;
+  --dur-fast: 150ms;
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --surface-2: #f9f9fb;
+  --surface-3: #f0f0f3;
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  /* Was #86868b: 3.3:1 on --bg, well under AA for the small type this token carries. Now 4.6:1. */
+  --text-3: #6f6f74;
+  --hairline: rgba(0, 0, 0, 0.08);
+  --hairline-strong: rgba(0, 0, 0, 0.14);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.05);
+  --chrome-bg: rgba(255, 255, 255, 0.72);
+  --accent: #0a84ff;
+  --accent-soft: rgba(10, 132, 255, 0.12);
+  /* Was #0a6ee0: 4.20:1 on the --accent-soft tint the running pill and the active outline row use.
+     Now 5.40:1 on --surface, 4.96:1 on --bg, 4.66:1 on --accent-soft over --surface. */
+  --accent-text: #0669cb;
+  /* White on --accent is 3.65:1, so .btn-primary needs its own darker fill: white on this is
+     5.57:1, and the button still reads 5.57:1 against --surface. */
+  --accent-strong: #0066cc;
+  --ok: #34c759;
+  --err: #ff3b30;
+  --warn: #ff9f0a;
+  /* The status hues above are fills, not type: as text they measure 2.22:1 (--ok), 2.06:1 (--warn)
+     and 3.55:1 (--err) on --surface. These are the same hues taken dark enough to read, and they
+     are what every status *word*, number, icon and status dot uses. Measured (light):
+       --ok-text   5.18:1 on --surface · 4.76:1 on --bg · 4.62:1 on the --ok-soft pill tint
+       --warn-text 5.18:1 on --surface · 4.76:1 on --bg · 5.01:1 on --chrome-bg
+       --err-text  5.78:1 on --surface · 5.31:1 on --bg · 4.91:1 on the --err-soft box tint */
+  --ok-text: #217d38;
+  --warn-text: #9c5f00;
+  --err-text: #cc0e00;
+  --muted: #aeaeb2;
+  --ok-soft: rgba(52, 199, 89, 0.14);
+  --err-soft: rgba(255, 59, 48, 0.12);
+  /* A white glyph on the six class colours measures 2.06:1 (mutate) to 4.13:1 (search), so the tool
+     chip's icon is a dark glyph on the full-strength class colour instead — the hues stay exactly as
+     they are and every glyph clears AA. Measured on light search/mutate/execute/delegate/network/other:
+     4.60 · 9.23 · 7.38 · 5.21 · 5.20 · 5.82; on the dark set: 5.39 · 9.23 · 11.03 · 5.39 · 6.70 · 5.82. */
+  --cls-ink: #101014;
+  --cls-search: #af52de;
+  --cls-mutate: #ff9f0a;
+  --cls-execute: #30b0c7;
+  --cls-delegate: #ff2d55;
+  --cls-network: #0a84ff;
+  --cls-other: #8e8e93;
+  /* Lane identity. Six hues, assigned by position, carried from the board's lane header into the
+     compare card, the timeline row and the palette's Focus rows so one lane is one colour wherever
+     it appears. They are only ever 2-3px rules, a 6px dot and a card's top edge — never type — so
+     the floor is the 3:1 non-text ratio: measured on --surface / --surface-3 they are
+     5.98/5.26 · 8.12/7.14 · 6.92/6.08 · 5.08/4.47 · 3.93/3.45 · 4.49/3.95. Deliberately darker and
+     less saturated than the --cls-* tool classes, which are the other colours on the same screen. */
+  --lane-hue-1: #2e669e;
+  --lane-hue-2: #712e9e;
+  --lane-hue-3: #9e2e66;
+  --lane-hue-4: #9e5f2e;
+  --lane-hue-5: #309161;
+  --lane-hue-6: #308191;
+  --diff-add: rgba(52, 199, 89, 0.16);
+  --diff-del: rgba(255, 59, 48, 0.14);
+  --selection: rgba(10, 132, 255, 0.25);
+  --hatch: color-mix(in srgb, var(--bg) 35%, transparent);
+}
+
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #1c1c1e;
+  --surface-2: #232325;
+  --surface-3: #2c2c2e;
+  --text: #f5f5f7;
+  --text-2: #a1a1a6;
+  --text-3: #8e8e93;
+  --hairline: rgba(255, 255, 255, 0.1);
+  --hairline-strong: rgba(255, 255, 255, 0.18);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.45);
+  --chrome-bg: rgba(28, 28, 30, 0.72);
+  --accent: #0a84ff;
+  --accent-soft: rgba(10, 132, 255, 0.2);
+  /* 6.01:1 on --surface, 4.70:1 on the --accent-soft tint — already clears AA, kept as it is. */
+  --accent-text: #409cff;
+  /* White on this is 4.70:1, and the filled button still reads 3.62:1 against --surface. */
+  --accent-strong: #0071e3;
+  --ok: #30d158;
+  --err: #ff453a;
+  --warn: #ffd60a;
+  /* On a dark surface the green and yellow already clear AA as type — 8.42:1 and 12.05:1 on
+     --surface (10.39:1 and 14.88:1 on --bg) — so the text variants are the hues themselves. Only
+     the red needed lifting: #ff453a measures 4.06:1 on the --err-soft box tint; this is 5.62:1 on
+     --surface, 4.61:1 on --surface-3 and 4.57:1 on that tint. */
+  --ok-text: var(--ok);
+  --warn-text: var(--warn);
+  --err-text: #ff5d52;
+  --muted: #636366;
+  --ok-soft: rgba(48, 209, 88, 0.18);
+  --err-soft: rgba(255, 69, 58, 0.18);
+  --cls-search: #bf5af2;
+  --cls-mutate: #ff9f0a;
+  --cls-execute: #64d2ff;
+  --cls-delegate: #ff375f;
+  --cls-network: #409cff;
+  --cls-other: #8e8e93;
+  /* Same six, lifted for a dark surface: 6.62/5.42 · 4.93/4.04 · 5.56/4.56 · 7.52/6.16 ·
+     10.41/8.53 · 9.20/7.53 on --surface / --surface-3. */
+  --lane-hue-1: #6ca6e0;
+  --lane-hue-2: #b16ce0;
+  --lane-hue-3: #e06ca6;
+  --lane-hue-4: #e09e6c;
+  --lane-hue-5: #6ce0a6;
+  --lane-hue-6: #6ccce0;
+  --diff-add: rgba(48, 209, 88, 0.18);
+  --diff-del: rgba(255, 69, 58, 0.18);
+  --hatch: color-mix(in srgb, var(--bg) 35%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000;
+    --surface: #1c1c1e;
+    --surface-2: #232325;
+    --surface-3: #2c2c2e;
+    --text: #f5f5f7;
+    --text-2: #a1a1a6;
+    --text-3: #8e8e93;
+    --hairline: rgba(255, 255, 255, 0.1);
+    --hairline-strong: rgba(255, 255, 255, 0.18);
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.45);
+    --chrome-bg: rgba(28, 28, 30, 0.72);
+    --accent-soft: rgba(10, 132, 255, 0.2);
+    --accent-text: #409cff;
+    --accent-strong: #0071e3;
+    --ok: #30d158;
+    --err: #ff453a;
+    --warn: #ffd60a;
+    --ok-text: var(--ok);
+    --warn-text: var(--warn);
+    --err-text: #ff5d52;
+    --muted: #636366;
+    --ok-soft: rgba(48, 209, 88, 0.18);
+    --err-soft: rgba(255, 69, 58, 0.18);
+    --cls-search: #bf5af2;
+    --cls-execute: #64d2ff;
+    --cls-delegate: #ff375f;
+    --cls-network: #409cff;
+    /* Same six, lifted for a dark surface: 6.62/5.42 · 4.93/4.04 · 5.56/4.56 · 7.52/6.16 ·
+       10.41/8.53 · 9.20/7.53 on --surface / --surface-3. */
+    --lane-hue-1: #6ca6e0;
+    --lane-hue-2: #b16ce0;
+    --lane-hue-3: #e06ca6;
+    --lane-hue-4: #e09e6c;
+    --lane-hue-5: #6ce0a6;
+    --lane-hue-6: #6ccce0;
+    --diff-add: rgba(48, 209, 88, 0.18);
+    --diff-del: rgba(255, 69, 58, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+  }
+}

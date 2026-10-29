@@ -1,0 +1,140 @@
+{
+  "purpose": "Deliberate transfer of existing replica lifecycle for maintained Python task experiments; no historical solver, campaign or corpus copied. Original revisions identify imported bytes before main-specific edits. Existing budget/watchdog compatibility files stay unchanged.",
+  "files": {
+    "launch_iteration.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "34f9431cf285c6b44125f2be34596dcd67d7f9e7f7bb855165081920c355236d",
+      "mode": 420
+    },
+    "iteration.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "5cadd91f814d135b75430cd82a176f0c4556928e358b315e3ab68ed97caed8ac",
+      "mode": 420
+    },
+    "execute.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "1f316d7d58f43247fc512f590164e90b93049049723bab8eed6cc67782f34a00",
+      "mode": 420
+    },
+    "readiness.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "bd96dc4f3018fa23526592cdb921d728d9b5c0b1348adb6fa1a36d083e760f2a",
+      "mode": 420
+    },
+    "processes.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "a5486fa3eb8fe956937ea98965ea9cc65b3d788ff1e0aab81a33b0954297318e",
+      "mode": 420
+    },
+    "course_api.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "4ed21b4f754df87107bf48d846444f22d607fb2d8b4a95e917a971e8c6041fb0",
+      "mode": 420
+    },
+    "owned_transport.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "fa79884bd944f56eec98a8d0203a76d1c700a35a5048002365daca32cd44e2ea",
+      "mode": 420
+    },
+    "prepare_cohort.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "9095be3ec09ce413f767cd4a96f2268b316a1720ac5a60012063f5724aaed84b",
+      "mode": 420
+    },
+    "provision.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "f5a274134d263bc526c73c5de6f0b8dac02b71266969e48aabebe0484ce6571a",
+      "mode": 420
+    },
+    "collection.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "bda9553461f6e847a855043aeaa0e42dac7a666f4b5e3a42eccc516b9fff63c8",
+      "mode": 420
+    },
+    "collect_and_cleanup.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "023e82b2bc33b4983d9768979ad9c834ca43117a5514f2294c5284b2c887ad16",
+      "mode": 420
+    },
+    "seal_evidence.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "6433c35ec49f18d5f17ebdc989b892f0a6efd2628baa7940ceac1135a116cddc",
+      "mode": 420
+    },
+    "telemetry.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "2977aa64508692ac6842f92d00e8f63abfc8cf386c1ef89f6b8a68a5bd003c10",
+      "mode": 420
+    },
+    "environment.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "8aaa71602a3c1f477c72aa8ca32fcbf5011078f0c9b19ddd941e3cd579dc6fb7",
+      "mode": 420
+    },
+    "image_snapshot.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "c2550cd64ac2b65f663a633c4fc6275605e50f273b53dc757626503bf06864c8",
+      "mode": 420
+    },
+    "image_object.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "02843ff1995b121eba481883a65cf687cea23ab512e22df91d4fd5dbb2265a3f",
+      "mode": 420
+    },
+    "startup_report.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "c6a4bf8075e61029184d69ce4f6e478519207e6cb4f09f8dd837a344691aab13",
+      "mode": 420
+    },
+    "task_resource_events.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "46bb8bfd180411e5c620f0eab382c4495609d05b4a192e341571a118aff6ab58",
+      "mode": 420
+    },
+    "bootstrap-cpu.sh": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "91d522f34ae160d50af773ab1c94241114e00228bf5234a91b92ecddccd61742",
+      "mode": 420
+    },
+    "bootstrap-gpu.sh": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "69137835edeea892332985d1bb3610fb42814876a9c0b74b2dabe60c0757cb9d",
+      "mode": 420
+    },
+    "start-gpu.sh": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "db37dd87ec41f819f4a71c75035cfb2dd01e444675c1ae82162b5e02a0e718ee",
+      "mode": 420
+    },
+    "tcp_forward.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "c98312a0c394963b57a1042e864de9a989d6d96467bb4270700f158ecb9f59d3",
+      "mode": 420
+    },
+    "a4-serve": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "4e06eb5a1fe751236af52c6a6a6ee5cb5b6b653bf95b1fc83279737e6178fd22",
+      "mode": 493
+    },
+    "Dockerfile.gpu": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "81a809e2c382e8622bba3cfc1838308494f66c5f1b9581949c6cf644adc472a0",
+      "mode": 420
+    },
+    "server_reuse.py": {
+      "revision": "740f207553de2f1bd3753a7ff7e95bc362674be1",
+      "sha256": "ce88f29c4aa9a4736a2e2eae93db400b5a0055d7e1ba6617adc1111c55bfe918",
+      "mode": 420
+    },
+    "workload_replay.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "f5c35de88b336e6b11ab71f9c4d6d897d775769186daf99b93ada02abf13665b",
+      "mode": 420
+    },
+    "inspect_run.py": {
+      "revision": "9c454b40740da5286e10ad32bac8b8bf922c180c",
+      "sha256": "19af3e049d10b76d18efec88cf7a4d3f7bf026840c89e58c89f7552d84524f8a",
+      "mode": 420
+    }
+  }
+}

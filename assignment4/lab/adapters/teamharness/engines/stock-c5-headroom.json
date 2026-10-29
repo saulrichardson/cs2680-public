@@ -1,0 +1,46 @@
+{
+  "engine": {
+    "engine": "sglang",
+    "format": 1,
+    "model": "nvidia/Qwen3.6-35B-A3B-NVFP4@1355db6a052410cfd62085d94b58866fd0f2c3c5"
+  },
+  "files": {
+    "engine.json": {
+      "bytes": 124,
+      "mode": 420,
+      "sha256": "9c0ce79a41e89d309403ac8e8fe4582977ed0c44ebebf00e7542d09d05bcec59"
+    },
+    "flags.txt": {
+      "bytes": 530,
+      "mode": 420,
+      "sha256": "1ede71c76280f6789883049e900e8b8293b58946478c3feda12c72a0276e6077"
+    },
+    "launch.sh": {
+      "bytes": 84,
+      "mode": 493,
+      "sha256": "a8ce0b3e9d557ffff9b572aec070f3f2225a3a9e1ecc50073861c89c53f610cf"
+    }
+  },
+  "framework": {
+    "launcher": "a4-serve",
+    "name": "sglang",
+    "provided_by": "course or matched lab environment; these assets do not install the framework",
+    "qualified_version": "0.5.20"
+  },
+  "profile": "stock-c5-headroom",
+  "qualification": {
+    "pinned_server_args_sha256": "118ebd9aa79757110c52ddd08593f05972c468f4326dc142c33e49a8b2702c65",
+    "pinned_wheel_sha256": "ffaced7e91c3536c63077b16b08210b5c1a2f362418e9841a8767d5e019cf08a",
+    "scope": "Derived memory-headroom profile; preserves checkpoint/framework, launcher and other flags. Fresh GPU qualification required; source_archive identifies the parent assets."
+  },
+  "source_archive": {
+    "engine_prefix": "engine/",
+    "name": "a4-stock-ahe-c5-under50mb-20261028.zip",
+    "sha256": "5702dd2892d031acc99065927bfa7d05198151f59f8cd503c23e6a84a1b111a4"
+  },
+  "derived_from": {
+    "profile": "stock-c5",
+    "change": "Only --mem-fraction-static changes from 0.90 to 0.85.",
+    "reason": "AWS planning traffic triggered a late kernel load and a failed 512 MiB CUDA allocation with about 0.49 GiB free."
+  }
+}

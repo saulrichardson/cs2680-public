@@ -1,0 +1,61 @@
+{
+  "name": "mission-control",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch --clear-screen=false --ignore src/app --ignore src/ui --ignore .next server.ts",
+    "build": "next build",
+    "start": "NODE_ENV=production tsx server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "db:generate": "drizzle-kit generate",
+    "evidence": "node scripts/evidence.mjs",
+    "fixtures:synth": "node --import tsx scripts/synth-fixture.mjs",
+    "fixtures:team": "node scripts/make-team-fixture.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.103.1",
+    "@tanstack/react-virtual": "3.14.13",
+    "@trpc/client": "11.18.0",
+    "@trpc/react-query": "11.18.0",
+    "@trpc/server": "11.18.0",
+    "better-sqlite3": "13.0.3",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^1.46.0",
+    "nanoid": "6.0.1",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "superjson": "2.2.6",
+    "ws": "8.21.3",
+    "zod": "4.6.7",
+    "zustand": "5.0.15"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "22.20.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "8.18.1",
+    "drizzle-kit": "0.31.10",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.28.1"
+    }
+  }
+}

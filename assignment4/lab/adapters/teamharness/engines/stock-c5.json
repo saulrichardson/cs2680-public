@@ -1,0 +1,41 @@
+{
+  "engine": {
+    "engine": "sglang",
+    "format": 1,
+    "model": "nvidia/Qwen3.6-35B-A3B-NVFP4@1355db6a052410cfd62085d94b58866fd0f2c3c5"
+  },
+  "files": {
+    "engine.json": {
+      "bytes": 124,
+      "mode": 420,
+      "sha256": "9c0ce79a41e89d309403ac8e8fe4582977ed0c44ebebf00e7542d09d05bcec59"
+    },
+    "flags.txt": {
+      "bytes": 530,
+      "mode": 420,
+      "sha256": "3e70c83fb6a5145c98a58c5588bf4a54a5fb07e5213cf9eecfd0956c5a7e1d92"
+    },
+    "launch.sh": {
+      "bytes": 84,
+      "mode": 493,
+      "sha256": "a8ce0b3e9d557ffff9b572aec070f3f2225a3a9e1ecc50073861c89c53f610cf"
+    }
+  },
+  "framework": {
+    "launcher": "a4-serve",
+    "name": "sglang",
+    "provided_by": "course or matched lab environment; these assets do not install the framework",
+    "qualified_version": "0.5.20"
+  },
+  "profile": "stock-c5",
+  "qualification": {
+    "pinned_server_args_sha256": "118ebd9aa79757110c52ddd08593f05972c468f4326dc142c33e49a8b2702c65",
+    "pinned_wheel_sha256": "ffaced7e91c3536c63077b16b08210b5c1a2f362418e9841a8767d5e019cf08a",
+    "scope": "Byte-identical engine assets from the accepted stock C5 package; local installation/launch-contract checks, no fresh GPU launch or Python-harness outcome claim."
+  },
+  "source_archive": {
+    "engine_prefix": "engine/",
+    "name": "a4-stock-ahe-c5-under50mb-20261028.zip",
+    "sha256": "5702dd2892d031acc99065927bfa7d05198151f59f8cd503c23e6a84a1b111a4"
+  }
+}

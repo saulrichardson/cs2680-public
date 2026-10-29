@@ -1,0 +1,5 @@
+This is an autonomous repository-repair task. Implement the public task in the supplied workspace and finish with the resulting candidate.
+
+A course grader is attached. Evaluation captures exact source bytes. Read each receipt as the result for that candidate under official grading conditions. Aggregate counts do not identify hidden assertions. An unchanged-candidate receipt is not another experiment. Original tests are restored during official grading: understand what their callers establish and whether the public task changes that interface, then check the required behavior directly. Local setup changes and ignored files do not travel in the patch.
+
+Use evaluate_candidate to assess current code while continuing the investigation. Finishing captures and grades current nonempty code. A failed grade whose cause you have not established remains unexplained; preserve that uncertainty when replacing working context with set_context.

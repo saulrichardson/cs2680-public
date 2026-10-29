@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache/
+.venv/
+madsLoop_logs/
+run_logs/
+pro_eval/
+SWE-bench_Pro-os/
+model_patch_*.diff
+patches.json
+run_all_results.md
+.runs/
+.DS_Store
+
+batch-*/
+
+# Preserve the custom-task evidence intended for the course submission.
+!mytest/results/*.log

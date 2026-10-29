@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Local implementation of the documented course helper's SGLang launch contract."""
+import argparse
+import importlib.util
+import os
+from pathlib import Path
+import shlex
+import shutil
+import subprocess
+
+p=argparse.ArgumentParser();p.add_argument('--flags-file',type=Path,required=True);a=p.parse_args()
+flags=shlex.split(a.flags_file.read_text(),comments=True)
+reserved=['--model-path','--served-model-name','--host','--port','--api-key']
+if any(x.split('=')[0] in reserved for x in flags):
+    p.error('Identity/network flags belong to the course environment')
+engine=Path(os.environ['A4_ENGINE_DIR']); patch=engine/'sglang.patch'
+if patch.exists():
+    # Patch the same installed version; never update dependencies or alter the image.
+    package=Path(importlib.util.find_spec('sglang').origin).parent
+    overlay=Path('/tmp/a4-sglang-overlay')
+    if overlay.exists():raise SystemExit('Fresh server container required for a source patch')
+    shutil.copytree(package,overlay/'python/sglang')
+    subprocess.run(['git','apply','--check',str(patch.resolve())],cwd=overlay,check=True)
+    subprocess.run(['git','apply',str(patch.resolve())],cwd=overlay,check=True)
+    os.environ['PYTHONPATH']=str(overlay/'python')+os.pathsep+os.environ.get('PYTHONPATH','')
+args=['python3','-m','sglang.launch_server',*flags,
+      '--model-path',os.environ['A4_MODEL_PATH'],
+      '--served-model-name',os.environ['A4_SERVED_MODEL_NAME'],
+      '--host',os.environ['A4_HOST'],'--port',os.environ['A4_PORT'],
+      '--api-key',Path(os.environ['A4_KEY_FILE']).read_text().strip()]
+os.execvp(args[0],args)

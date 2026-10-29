@@ -1,0 +1,64 @@
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary smoke outputs
+.tmp/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local runtime state (databases, worktrees, caches)
+.data/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Private evidence and raw archives must stay outside this edition.
+**/sessions/
+**/developer_logs/
+*.tar.gz
+*.zip
+*.pdf
+
+# Local git worktrees for feature branches
+.worktrees/
+
+# Local experiments, evidence and migration recovery
+/.scratch/
+__pycache__/
+*.pyc
+
+# Local agent tooling and nested historical worktrees
+/.claude/
+CLAUDE.local.md
+claude-sessions.tar.gz
+
+# Keep internal research and submission records outside the source repository.
+/assignment1/release-manifest.json
+/assignment1/writeup.md
+/assignment2/writeup.tex
+/PUBLIC_EXPORT_MANIFEST.json
+/assignment4/experiments/
+/assignment4/research/*
+!/assignment4/research/repair-guidance/
+/assignment4/research/repair-guidance/*
+!/assignment4/research/repair-guidance/README.md
+!/assignment4/research/repair-guidance/manifest.json
+!/assignment4/research/repair-guidance/solver/
+!/assignment4/research/repair-guidance/integration/
+# Long synthetic streams are generated locally from their source generators.
+/assignment1/fixtures/synth-2000.jsonl
+/assignment1/fixtures/team-cafe.jsonl

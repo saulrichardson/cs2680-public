@@ -1,0 +1,88 @@
+{
+  "publication": "portable-repository-repair-guidance",
+  "version": 2,
+  "behavioral_validation": "Not yet evaluated as a live solver intervention.",
+  "system_prompt": "SYSTEM_PROMPT.md",
+  "catalog": "SKILLS.md",
+  "solver_root": "solver",
+  "skills": [
+    {
+      "name": "inspect-platforms-and-resources",
+      "description": "Investigate platform-specific collection, native interfaces, process outcomes, and resource lifecycle. Use when installed and active state differ, sources disagree, cleanup is incomplete, protocols vary by platform, or local environment assumptions affect the repair.",
+      "entrypoint": "skills/inspect-platforms-and-resources/SKILL.md"
+    },
+    {
+      "name": "investigate-with-evidence",
+      "description": "Choose observations that distinguish competing explanations and revise an investigation after contradictory results. Use when a repair seems plausible but failures persist, a grade is unexplained, or repeated checks no longer change the decision.",
+      "entrypoint": "skills/investigate-with-evidence/SKILL.md"
+    },
+    {
+      "name": "parse-and-match-records",
+      "description": "Preserve grammar, linkage, identity, and order while parsing or matching records. Use for alternate representations, multilingual data, reader parity, entity resolution, grouped results, or ambiguous normalization and selection rules.",
+      "entrypoint": "skills/parse-and-match-records/SKILL.md"
+    },
+    {
+      "name": "preserve-identity-and-trust",
+      "description": "Preserve entity identity, credential purpose, authorization, and trust decisions across storage and forwarding. Use for cryptographic key operations, signed identifiers, password verification, registry credentials, or related entities whose secrets or preferences can be confused.",
+      "entrypoint": "skills/preserve-identity-and-trust/SKILL.md"
+    },
+    {
+      "name": "preserve-representations",
+      "description": "Preserve meaning across encoding, conversion, wrapping, serialization, and reader/writer boundaries. Use when correct intermediate values become corrupted, metadata disappears, wire formats differ, or a changed result breaks its consumer.",
+      "entrypoint": "skills/preserve-representations/SKILL.md"
+    },
+    {
+      "name": "reason-about-async-state",
+      "description": "Explain asynchronous behavior through event order, state ownership, and visible effects. Use for UI propagation, timers, polling, streaming counters, stale responses, cancellation, or work deferred until other operations settle.",
+      "entrypoint": "skills/reason-about-async-state/SKILL.md"
+    },
+    {
+      "name": "repair-storage-and-reconciliation",
+      "description": "Repair cache policy, persistent state, migrations, indexed reads, and desired-state updates without losing scope or ownership. Use when repeated operations, stale results, missing records, defaults, or incomplete convergence are the defect.",
+      "entrypoint": "skills/repair-storage-and-reconciliation/SKILL.md"
+    },
+    {
+      "name": "trace-configuration-and-interfaces",
+      "description": "Trace public configuration and changed interfaces through decoding, defaults, constructors, wrappers, and consumers. Use when an accepted option has no effect, values disappear between layers, schemas disagree with defaults, or a signature/dependency migration is incomplete.",
+      "entrypoint": "skills/trace-configuration-and-interfaces/SKILL.md"
+    },
+    {
+      "name": "verify-contracts-and-tests",
+      "description": "Check exact caller-visible interfaces and derive expectations independently of a repair. Use for specified signatures, error shapes, return values, compatibility changes, fixture migrations, or local tests that disagree with external results.",
+      "entrypoint": "skills/verify-contracts-and-tests/SKILL.md"
+    }
+  ],
+  "solver_files": {
+    "solver/SKILLS.md": "b31e584c06d16813be954b773988b8285f4d856bcde2cb50a32e2e51bee20601",
+    "solver/SYSTEM_PROMPT.md": "c62e420fea593e35fce214a395459181ea9ba59756299d0da4f2ae4c5a7c7923",
+    "solver/skills/inspect-platforms-and-resources/SKILL.md": "f817de7e09a1a8f4d362ba96d247eaa65b68187c1b5547c68959a89361d99bda",
+    "solver/skills/inspect-platforms-and-resources/references/inventory-and-advisories.md": "cf342cd5da13024a51989255f540e5a2930c369f2bac0608278bbfd71d961adb",
+    "solver/skills/inspect-platforms-and-resources/references/native-and-processes.md": "6e7c20f0413cfe3b700fa67c2fa8292eadaeddef3a9650e550d5c57fb067e7cd",
+    "solver/skills/inspect-platforms-and-resources/references/resource-lifecycle.md": "4d7b4580f5564caf8b5cea0f1209f85e79b283d5bac73389a20e0fa8d7af47c6",
+    "solver/skills/investigate-with-evidence/SKILL.md": "bb5c6b7886f1a4a9759fe011fc6f0bf419cd0e25729f4f5c9d470363eed4ce7b",
+    "solver/skills/parse-and-match-records/SKILL.md": "706e3427c50b253cf3114d6779390975df0776d271fceb802fca7f48f581f3a8",
+    "solver/skills/parse-and-match-records/references/grammar-and-normalization.md": "6904f9d0a96baa4a6959776d47d280b21e5dfe8ac912c95177533034b8577740",
+    "solver/skills/parse-and-match-records/references/linked-records.md": "9ad61ac7c25f65e83c1d7f6ae384677127aea174ec83bd4bff8b844487f32c52",
+    "solver/skills/parse-and-match-records/references/matching-and-order.md": "ece0f65dfea2d41b5657dd67ce01f12e44e82297cf215a49a6c4922cdbbf54ab",
+    "solver/skills/preserve-identity-and-trust/SKILL.md": "8cfe460a9884db28b39324b9b9461b7e3d6b9c0dd46b12ecb02479cef0481a4d",
+    "solver/skills/preserve-identity-and-trust/references/credentials-and-crypto.md": "ea0d724659f30f7e3e013bdf6c538aa1b60a07e7c11188de861712a2a0481be8",
+    "solver/skills/preserve-representations/SKILL.md": "80bf131738d20be89a0ee27f7b6cccefeac5bcca41e34fef7c4e0938f073cca0",
+    "solver/skills/preserve-representations/references/coercion-and-metadata.md": "634942ebb51b3102f561f75208501b9ee9339e929f0da17cf84375610b2b46d0",
+    "solver/skills/preserve-representations/references/wire-and-serialization.md": "f25c86001e05f477e261ae8ecdda5d04e3b384152546c7c9a8f86465207f07d5",
+    "solver/skills/reason-about-async-state/SKILL.md": "89c51fa5a28eb3aea9736f093f3291704710ee2a75f71c773775d2c6c8c33080",
+    "solver/skills/reason-about-async-state/references/event-and-ui-patterns.md": "7acc21e86b9d6ad26cfbd475196859194957ababebe23bc3047b13e6b1e68eb0",
+    "solver/skills/repair-storage-and-reconciliation/SKILL.md": "cde97d6f0f72eab41d8c2e21ab337c3142490e0a6bf03495c1158d2a403a2230",
+    "solver/skills/repair-storage-and-reconciliation/references/cache-policy.md": "9646301222a9f1792fe070e9a43f16b8db87dc9313cf9401772c5fb493f4a49a",
+    "solver/skills/repair-storage-and-reconciliation/references/persistence-and-api.md": "e128614fdb2702d9c1a1d93740f45ef966c4d4b89b41be3aa4023b34c5074886",
+    "solver/skills/repair-storage-and-reconciliation/references/reconciliation.md": "59b88b6213eda86371723e5febb147434b9a9a5f1246b6ca1894329ba0cddf03",
+    "solver/skills/trace-configuration-and-interfaces/SKILL.md": "2907a9930001cfe67b3943bd46dad31fda5cb89d801c49568d3621bd59e34c97",
+    "solver/skills/trace-configuration-and-interfaces/references/defaults-and-schemas.md": "f576184d78de77c6964f9087925445c899ad19c23dbc1b7a60bf1e6367193f48",
+    "solver/skills/trace-configuration-and-interfaces/references/service-construction.md": "f3c5c54f74989eb9f8863e6f77facfc08541936537c75de340bcffaa6617485e",
+    "solver/skills/verify-contracts-and-tests/SKILL.md": "594e5d785a0d5e97e0eb5343534010b97d6788da320a6c6284b67e37854eb85a"
+  },
+  "excluded_from_solver_input": [
+    "integration/",
+    "README.md",
+    "manifest.json"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "purpose": "Inventory and hashes of bundled guidance; authored advice, not runtime observations or a measured performance claim.",
+  "files": [
+    {
+      "installed": "mechanisms/.agents/skills/async-ui-and-streams/SKILL.md",
+      "installed_sha256": "8d3c9b54690613161f9cd20e1668f39a7e2b259d269632a9ab125c22cf18ed12"
+    },
+    {
+      "installed": "mechanisms/.agents/skills/configuration-interfaces-and-identity/SKILL.md",
+      "installed_sha256": "890efff6294a61c819cda2d828383fa03295c96098d401d73664c9bea62db8ff"
+    },
+    {
+      "installed": "mechanisms/.agents/skills/data-and-parsing/SKILL.md",
+      "installed_sha256": "bbcc5c3800cd20878cc83b225c6d5764afd94e604abb74bc2608c34e1e8d59f4"
+    },
+    {
+      "installed": "mechanisms/.agents/skills/platforms-processes-and-resources/SKILL.md",
+      "installed_sha256": "9e6cee6a0b59b980164ef9dbb53f508323d0a06631b25534f6faaa4db1d49bf5"
+    },
+    {
+      "installed": "mechanisms/.agents/skills/state-storage-and-reconciliation/SKILL.md",
+      "installed_sha256": "209085019f44e8b2cf309bcebebeac49dfc74058524593fb08eb8f278b16846d"
+    },
+    {
+      "installed": "mechanisms/.repair-memory/cookbooks/go.md",
+      "installed_sha256": "e5cd53917088c13766d24b942dfe7e0dddbeded8a47113e247757f01ea01ff09"
+    },
+    {
+      "installed": "mechanisms/.repair-memory/cookbooks/native.md",
+      "installed_sha256": "0c24ee984cff4d2acfac7f0547eca58712045096d38dacd5d6ea740376d00b0f"
+    },
+    {
+      "installed": "mechanisms/.repair-memory/cookbooks/python.md",
+      "installed_sha256": "93cad7a29fe9947399b1175fd345bbf5a67a469bb3aa897c072c5f40037ffb89"
+    },
+    {
+      "installed": "mechanisms/.repair-memory/cookbooks/typescript.md",
+      "installed_sha256": "b80916e73bc3890a62645ffdea902036fe18986edcc2e510d79b21608a92a0eb"
+    },
+    {
+      "installed": "mechanisms/.repair-memory/reference_models.py",
+      "installed_sha256": "38a65746aa7db5f9164c9175f6948c1d7fe743ee1e11ce6d27cf94e6bf687d82"
+    },
+    {
+      "installed": "mechanisms/index.md",
+      "installed_sha256": "4fe26a69871c384e8b647ea302526dce51e215529e94ff27eeecf472829bffd9"
+    },
+    {
+      "installed": "languages/go.md",
+      "installed_sha256": "8c7e4858e96070b0c17e4e1005dc2329156862b1e9d791b36dae8f1b3a2e3ff9"
+    },
+    {
+      "installed": "languages/python.md",
+      "installed_sha256": "2e25804efbdd1b266413f5c269bc714225883d21ab66811afe580cd58a743c4f"
+    },
+    {
+      "installed": "languages/react.md",
+      "installed_sha256": "c9203b914f0a3219c65c7001d4d703a7b9cca4a7fd39408d9b6515929ab5f9e1"
+    },
+    {
+      "installed": "languages/typescript-javascript.md",
+      "installed_sha256": "3f3184b988eecda39171f9548b029a5b3ed2d4ac017d0a6d24ae04931b54044e"
+    },
+    {
+      "installed": "investigation.md",
+      "installed_sha256": "f19fcfc8d5cf2351e2e1143decc2e58e1eff552339f005c309c37028c249d0f6"
+    }
+  ]
+}

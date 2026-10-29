@@ -1,0 +1,4 @@
+[
+  {"name": "range-a", "fixture": "range", "seconds": 900},
+  {"name": "range-b", "fixture": "range", "seconds": 900}
+]

@@ -1,0 +1,13 @@
+dist-newstyle/
+.run/
+src/investigator
+src/investigator.sha256
+submission.zip
+ui/node_modules/
+ui/dist/
+ui/*.tsbuildinfo
+output/
+.playwright-cli/
+
+# Machine-specific caches, credentials, live state and large evidence.
+.local/

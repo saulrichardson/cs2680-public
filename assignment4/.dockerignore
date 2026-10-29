@@ -1,0 +1,12 @@
+dist-newstyle
+.run
+src/investigator
+src/investigator.sha256
+ui
+__pycache__
+*.zip
+
+.local
+lab
+experiments
+research
